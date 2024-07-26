@@ -6,12 +6,14 @@ interface AssignmentsProps {
   assignments: AssignmentType[];
   deleteAssignment: (index: number) => void;
   toggleCompletion: (index: number) => void;
+  setDueDate: (index: number, date: Date) => void;
 }
 
 export function Assignments({
   assignments,
   deleteAssignment,
   toggleCompletion,
+  setDueDate,
 }: AssignmentsProps) {
   const completedCount = assignments.filter((assignment) => assignment.completed)
     .length;
@@ -40,6 +42,7 @@ export function Assignments({
             assignment={assignment}
             deleteAssignment={deleteAssignment}
             toggleCompletion={toggleCompletion}
+            setDueDate={setDueDate}
           />
         ))}
       </div>

@@ -5,6 +5,7 @@ import { useState } from "react";
 export interface AssignmentType {
   title: string;
   completed: boolean;
+  dueDate?: Date;
 }
 
 function App() {
@@ -25,6 +26,13 @@ function App() {
     setAssignments(newAssignments);
   }
 
+  const setDueDate = (index: number, date:Date) => {
+    const newAssignments = assignments.map((assignment, i) => 
+      i === index ? { ...assignment, dueDate: date} : assignment
+    );
+    setAssignments(newAssignments);
+  };
+
   return (
     <>
       <Header addAssignment={addAssignment} />
@@ -32,6 +40,7 @@ function App() {
         assignments={assignments}
         deleteAssignment={deleteAssignment} 
         toggleCompletion={toggleCompletion}
+        setDueDate={setDueDate}
       />
     </>
   );

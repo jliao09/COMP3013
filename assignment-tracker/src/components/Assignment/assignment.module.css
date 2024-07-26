@@ -47,3 +47,49 @@ p.textCompleted {
   border: none;
   color: #808080;
 }
+
+.assignment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.checkContainer {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.textCompleted {
+  text-decoration: line-through;
+}
+
+.dueDate {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.dueTomorrow {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.dateButton {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
